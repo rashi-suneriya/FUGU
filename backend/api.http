@@ -1,0 +1,61 @@
+## REGISTER
+POST http://localhost:9080/register HTTP/1.1
+Content-Type: application/json
+
+{
+  
+    "username" : "rashi suneriya",
+    "password" : "12345",
+    "email": "rashisuneriya@gmail.com",
+    "name": "rashi"
+
+}  
+
+### LOGIN
+POST http://localhost:9080/login HTTP/1.1
+Content-Type: application/json
+
+{
+  
+  "email": "rashisuneriya@gmail.com",
+  "password": "12345"
+}
+
+
+### GET PROFILE
+GET http://localhost:9080/get_user_and_profile
+Content-Type: application/json
+
+{
+  "token": "30199de56e1b78bc12a155002c255c8c2749b4de5c62f818a4dd813752b74e50"
+}
+
+###
+
+POST http://localhost:9080/update_profile_data HTTP/1.1
+Content-Type: application/json
+
+{
+  "token": "30199de56e1b78bc12a155002c255c8c2749b4de5c62f818a4dd813752b74e50",
+  "bio": "software Engineerings",
+  "currentPost": "CTO",
+  "pastWork": [
+    {
+      "company": "Microsoft",
+      "position": "CTO",
+      "years": "2+"
+    }
+  ],
+  "education": [
+    {
+      "school": "IIT",
+      "degree": "B.Tech",
+      "fieldOfStudy": "2023-2026"
+    }
+  ]
+}
+
+
+####
+
+ GET http://localhost:9080/user/get_all_users 
